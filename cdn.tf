@@ -19,6 +19,18 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   comment             = "S3 Static Webstie CloudFront Distribution..."
   default_root_object = "index.html"
 
+  custom_error_response {
+    error_code         = 403
+    response_code      = 404
+    response_page_path = "/404.html"
+  }
+
+  custom_error_response {
+    error_code         = 404
+    response_code      = 404
+    response_page_path = "/404.html"
+  }
+
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods   = ["GET", "HEAD"]
@@ -45,7 +57,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
-//CloudFront distribution to use an SSL/TLS certificate  - Default certificate
+  //CloudFront distribution to use an SSL/TLS certificate  - Default certificate
   viewer_certificate {
     cloudfront_default_certificate = true
   }

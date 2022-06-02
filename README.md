@@ -10,12 +10,10 @@ Australia. Let’s say that bucket with static content located in the region ‘
 (Ireland) eu-west-1’
 • Make your solution secure, so the users can be sure that their data
 and personal information are safe.
+• Make your solution to be able to handle bucket-related errors. Hint:
+your objects are not available because of the outage.
 
 # Pending Assignment Tasks:
-
-Additional points that you can cover to show your skills:
-1- Make your solution to be able to handle bucket-related errors. Hint:
-your objects are not available because of the outage.
 
 Advance level:
 2- Provision additionally one EC2 instance. Allow changes to the site only
