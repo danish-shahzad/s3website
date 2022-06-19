@@ -13,8 +13,6 @@ and personal information are safe.
 • Make your solution to be able to handle bucket-related errors. Hint:
 your objects are not available because of the outage.
 
-# Pending Assignment Tasks:
-
 Advance level:
 2- Provision additionally one EC2 instance. Allow changes to the site only
 from that specific EC2 instance.
@@ -37,6 +35,7 @@ $ terraform apply
 Once provisioned, it will output 2 things:
 1- Bucket name
 2- Domain name
+3- ec2 instance Id
 
 ***You can use domain name to see the website on browser.***
 
